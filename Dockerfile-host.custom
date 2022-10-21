@@ -1,0 +1,20 @@
+FROM ubuntu:16.04
+
+LABEL maintainer="Andrea Fulcheri"
+
+ENV TZ=Europe/Rome
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update -y && apt-get install -y \
+net-tools \
+ssh \
+ftp \
+netcat \
+iputils-ping \
+vim \
+npm \
+iproute2 \
+curl \
+traceroute \
+sudo
