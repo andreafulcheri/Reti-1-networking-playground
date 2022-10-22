@@ -131,3 +131,8 @@ tshark -i eth0
 ```
 
 ![Capture packets](./Assets/capture-packets.png "Capture packets")
+
+# Contributors
+
+Andrea Fulcheri and Matteo Marengo
+22/10/2022
