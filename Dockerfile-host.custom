@@ -12,9 +12,10 @@ ssh \
 ftp \
 netcat \
 iputils-ping \
-vim \
+nano \
 npm \
 iproute2 \
 curl \
 traceroute \
-sudo
+sudo \
+tcpdump

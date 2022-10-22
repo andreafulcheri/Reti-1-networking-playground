@@ -13,10 +13,12 @@ ssh \
 ftp \
 netcat \
 iputils-ping \
-vim \
 npm \
 iproute2 \
 curl \
 traceroute \
 wireshark \
-sudo
+tshark \
+sudo \
+nano \
+tcpdump
