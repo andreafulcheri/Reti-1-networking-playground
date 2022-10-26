@@ -69,12 +69,14 @@ server:
   container_name: server
   hostname: server
   tty: true
+  ports:
+    - 80:80
   cap_add:
     - ALL
   networks:
     net-b:
       ipv4_address: 192.169.2.22
-  command: bash -c "route add -net 192.169.0.0 netmask 255.255.0.0 gw 192.169.2.2 dev eth0 && /bin/bash"
+  command: bash -c "route add -net 192.169.0.0 netmask 255.255.0.0 gw 192.169.2.2 dev eth0 && apache2ctl -D FOREGROUND && /bin/bash"
 ```
 
 We specified:
@@ -82,6 +84,7 @@ We specified:
 - tty: true, to keep the container running
 - cap_add: ALL, to add all the capabilities to the container. This is needed to run the route command
 - networks: to specify the network in which the container will be connected and we specified the ip address
+- ports: the expose of default port for apache2
 - command: to add the route to the network because the container doesn't know the network in which it is connected and we need to specify the gateway to which to send packets whose destination is not in the client's local network, and the device to use to reach the network.
 
 #### Router
