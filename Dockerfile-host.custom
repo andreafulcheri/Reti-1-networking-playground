@@ -18,4 +18,6 @@ iproute2 \
 curl \
 traceroute \
 sudo \
-tcpdump
+tcpdump \
+apache2 \
+apache2-utils

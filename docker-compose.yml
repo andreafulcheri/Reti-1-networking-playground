@@ -22,12 +22,14 @@ services:
     container_name: server
     hostname: server
     tty: true
+    ports:
+      - 80:80
     cap_add:
       - ALL
     networks:
       net-b:
         ipv4_address: 192.169.2.22
-    command: bash -c "route add -net 192.169.0.0 netmask 255.255.0.0 gw 192.169.2.2 dev eth0 && /bin/bash"
+    command: bash -c "route add -net 192.169.0.0 netmask 255.255.0.0 gw 192.169.2.2 dev eth0 && apache2ctl -D FOREGROUND && /bin/bash"
 
   router:
     build:
