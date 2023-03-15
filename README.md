@@ -1,6 +1,5 @@
 # Reti 1 networking playground
-
-## Building an internal network in Docker
+## Building an internal network in Docker for educational purposes
 
 ### Introduction
 
